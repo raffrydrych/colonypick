@@ -1,0 +1,19 @@
+# conda env create -f environment.yml
+# conda activate colonypick
+# pip install -e . --no-deps      # installs the `colonypick` command; dependencies come from conda-forge
+name: colonypick
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - scikit-image
+  - py-opencv
+  - joblib
+  - matplotlib
+  - pytest
+  - pip

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "colonypick"
+version = "0.1.0"
+description = "Morphology-guided colony picking that maximises the expected number of distinct taxa (built on CAMII)"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.22",
+    "pandas>=1.5",
+    "scipy>=1.9",
+    "scikit-learn>=1.2",
+    "scikit-image>=0.19",
+    "opencv-python-headless>=4.6",
+    "joblib>=1.2",
+    "matplotlib>=3.5",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+colonypick = "colonypick.cli:main"
+
+[tool.setuptools]
+packages = ["colonypick"]
